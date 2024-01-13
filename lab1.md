@@ -31,7 +31,7 @@ Argument: path to directory
   * This was the output because `cd` can only take no arguments or a path to a directory as an argument, so inputting a path to a file led to this error message.
   * This is an error because the purpose of `cd` is to change directories. As such, it only takes paths to directories for arguments, and in this instance, a path to a file was inputted.
 
-  ## Command `ls`
+## Command `ls`
   Argument: None
   ```
   [user@sahara ~/lecture1]$ ls
