@@ -21,47 +21,47 @@ Argument: path to directory
 * It is not an error.
 
 ---
-  Argument: path to file
-  ```
-  [user@sahara ~/lecture1]$ cd Hello.java
-  bash: cd: Hello.java: Not a directory
-  [user@sahara ~/lecture1]$
-  ```
-  * The working directory was `/home/lecture1`
-  * This was the output because `cd` can only take no arguments or a path to a directory as an argument, so inputting a path to a file led to this error message.
-  * This is an error because the purpose of `cd` is to change directories. As such, it only takes paths to directories for arguments, and in this instance, a path to a file was inputted.
+Argument: path to file
+```
+[user@sahara ~/lecture1]$ cd Hello.java
+bash: cd: Hello.java: Not a directory
+[user@sahara ~/lecture1]$
+```
+* The working directory was `/home/lecture1`
+* This was the output because `cd` can only take no arguments or a path to a directory as an argument, so inputting a path to a file led to this error message.
+* This is an error because the purpose of `cd` is to change directories. As such, it only takes paths to directories for arguments, and in this instance, a path to a file was inputted.
 
 ## Command `ls`
-  Argument: None
-  ```
-  [user@sahara ~/lecture1]$ ls
-  Hello.class  Hello.java  messages  README
-  [user@sahara ~/lecture1]$
-  ```
-  * The working directory was `/home/lecture1`.
-  * This was the output because `ls` lists the files and directories. In this case, there were no arguments, so the command listed all items in the current working directory.
-  * This is not an error.
+Argument: None
+```
+[user@sahara ~/lecture1]$ ls
+Hello.class  Hello.java  messages  README
+[user@sahara ~/lecture1]$
+```
+* The working directory was `/home/lecture1`.
+* This was the output because `ls` lists the files and directories. In this case, there were no arguments, so the command listed all items in the current working directory.
+* This is not an error.
  
- ---
-  Argument: path to directory
-  ```
-  [user@sahara ~/lecture1]$ ls ./messages
-  en-us.txt  es-mx.txt  fr.txt  zh-cn.txt
-  [user@sahara ~/lecture1]$
-  ```
-  * The working directory was `/home/lecture1`.
-  * This was the output because if the argument is a directory, `ls` will list the items in that directory.
-  * This is not an error.
+---
+Argument: path to directory
+```
+[user@sahara ~/lecture1]$ ls ./messages
+en-us.txt  es-mx.txt  fr.txt  zh-cn.txt
+[user@sahara ~/lecture1]$
+```
+* The working directory was `/home/lecture1`.
+* This was the output because if the argument is a directory, `ls` will list the items in that directory.
+* This is not an error.
 
- ---
-  Argument: path to file
-  ```
-  [user@sahara ~/lecture1]$ ls Hello.java
-  Hello.java[user@sahara ~/lecture1]$
-  ```
-  * The working directory was `/home/lecture1`.
-  * This was the output because the argument was not empty nor a directory, so it just repeated the file name back.
-  * This is technically an error because the purpose of `ls` is to list content and files within a directory. Therefore, passing a file as an argument into the command is practically useless.
+---
+Argument: path to file
+```
+[user@sahara ~/lecture1]$ ls Hello.java
+Hello.java[user@sahara ~/lecture1]$
+```
+* The working directory was `/home/lecture1`.
+* This was the output because the argument was not empty nor a directory, so it just repeated the file name back.
+* This is technically an error because the purpose of `ls` is to list content and files within a directory. Therefore, passing a file as an argument into the command is practically useless.
 
 ## Command: `cat`
 Argument: None
