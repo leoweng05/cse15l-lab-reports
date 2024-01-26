@@ -2,7 +2,9 @@
 
 ## Part 1
 ChatServer.java Code: 
-```import java.io.IOException;
+
+```
+import java.io.IOException;
 import java.net.URI;
 
 class Handler implements URLHandler {
@@ -55,5 +57,16 @@ Screenshot 2:
 * `handleRequest()` was called.
 * The relevant argument is `URI url` which has the value of `new URI("http://localhost:4000/add-message?s=Goodbye&user=leoweng")`. The relevant field is `String finalMessage` which currently has the value `"leoweng: Greetings"`.
 * `String finalMessage` takes the value `"leoweng: Greetings\nleoweng: Goodbye"` after this request.
+
+## Part 2
+
+Private Key Path: `C:\Users\leowe\.ssh\id_rsa.pub`
+![image](https://github.com/leoweng05/cse15l-lab-reports/assets/62259208/dd759137-b064-4815-890d-6a517a8a673a)
+
+Public Key Path: `~/.ssh/authorized_keys`
+![image](https://github.com/leoweng05/cse15l-lab-reports/assets/62259208/ae1d9e22-0497-4c17-b5e7-396a3feee4b3)
+
+Terminal Interaction, no password: 
+![image](https://github.com/leoweng05/cse15l-lab-reports/assets/62259208/cf27df48-d56d-4eef-877c-7bd5dc836c64)
 
 
