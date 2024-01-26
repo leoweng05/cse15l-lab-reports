@@ -69,4 +69,6 @@ Public Key Path: `~/.ssh/authorized_keys`
 Terminal Interaction, no password: 
 ![image](https://github.com/leoweng05/cse15l-lab-reports/assets/62259208/cf27df48-d56d-4eef-877c-7bd5dc836c64)
 
+## Part 3
+One main thing I learned from the last couple weeks was how to start a remote server that different people could access. I also learned more about SSH and how to save the keys so that you can log on without needing the type the password over and over. Finally, the week 3 lab made me more familiar with the differences between a bash terminal and the powershell terminal. 
 
