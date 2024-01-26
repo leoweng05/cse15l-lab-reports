@@ -1,7 +1,7 @@
 # Lab Report 2 - Servers and SSH Keys (Week 3)
 
 ## Part 1
-Code: 
+Chat Server Code: 
 ```import java.io.IOException;
 import java.net.URI;
 
@@ -43,5 +43,9 @@ class ChatServer {
     }
 }
 ```
+![lab2-1](https://github.com/leoweng05/cse15l-lab-reports/assets/62259208/a54290ca-315a-4047-a447-9c4a422fa97f)
+
+![image](https://github.com/leoweng05/cse15l-lab-reports/assets/62259208/793acada-24ef-4f3e-b53e-996881960da9)
+
 
 
