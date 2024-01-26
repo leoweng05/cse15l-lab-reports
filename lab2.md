@@ -43,6 +43,7 @@ class ChatServer {
     }
 }
 ```
+
 Screenshot 1:
 ![lab2-1](https://github.com/leoweng05/cse15l-lab-reports/assets/62259208/a54290ca-315a-4047-a447-9c4a422fa97f)
 * `handleRequest()` was called.
