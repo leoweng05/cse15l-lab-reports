@@ -49,4 +49,14 @@ Bug:
     }
   }
   ```
-  The reason why there was a bug was that the array was overwriting its values at the same time it was reading through them. This logic flaw only reverses the first half of the array, leaving the second half as it already is (because the first half was switched to be the mirror of the original second half, so mirroring that again would just leave the original second half). The fix accounts for this by reading through the array values but storing them in a temporary array, so the danger of overriding values would not occur. Then, it copies over the reversed values from the temp array to the original array, correctly leaving a fully reversed array. 
+The reason why there was a bug was that the array was overwriting its values at the same time it was reading through them. This logic flaw only reverses the first half of the array, leaving the second half as it already is (because the first half was switched to be the mirror of the original second half, so mirroring that again would just leave the original second half). The fix accounts for this by reading through the array values but storing them in a temporary array, so the danger of overriding values would not occur. Then, it copies over the reversed values from the temp array to the original array, correctly leaving a fully reversed array. 
+
+## Part 2 - Researching Commands
+
+Command of choice - `find`
+
+Options and Examples:
+1. 
+2. 
+3. 
+4. 
