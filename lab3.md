@@ -55,8 +55,9 @@ The reason why there was a bug was that the array was overwriting its values at 
 
 Command of choice - `find`
 
-Options and Examples:
-1. 
-2. 
-3. 
-4. 
+Options and Examples: https://snapshooter.com/learn/linux/find#basic-syntax
+1. `-not`
+2. `-iname`
+3. `-size`
+4. `-exec`
+https://linuxhandbook.com/find-exec-command/
