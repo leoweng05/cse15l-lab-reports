@@ -35,9 +35,8 @@ Bug:
       arr[i] = arr[arr.length - i - 1];
     }
   }
-  ``
-* After:
 ```
+* After:
 ```
 // Changes the input array to be in reversed order
   static void reverseInPlace(int[] arr) {
