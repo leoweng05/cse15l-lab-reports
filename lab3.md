@@ -3,24 +3,24 @@
 ## Part 1 - Bugs
 
 Failure Inducing Input:
-``	
+```	
 @Test 
 	public void testReverseInPlace() {
     int[] input2 = {1, 2, 3};
     ArrayExamples.reverseInPlace(input2);
     assertArrayEquals(new int[]{3, 2, 1}, input2);
 	} 
- ``
+ ```
 
  Input that doesn't induce failure: 
- ``
+ ```
  	@Test 
 	public void testReverseInPlace() {
     int[] input1 = { 3 };
     ArrayExamples.reverseInPlace(input1);
     assertArrayEquals(new int[]{ 3 }, input1);
 	}
- ``
+ ```
 
 Symptoms:
 * For Failure Inducing Input: ![image](https://github.com/leoweng05/cse15l-lab-reports/assets/62259208/07387763-c19c-4cd1-a850-a01ea9122964)
