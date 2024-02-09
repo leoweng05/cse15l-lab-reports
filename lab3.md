@@ -57,7 +57,12 @@ Command of choice - `find`
 
 Options and Examples: https://snapshooter.com/learn/linux/find#basic-syntax
 1. `-not`
+   * source used:
+    
 2. `-iname`
+   * source used:
 3. `-size`
+   * source used:
 4. `-exec`
+   * source used:
 https://linuxhandbook.com/find-exec-command/
