@@ -5,21 +5,21 @@
 Failure Inducing Input:
 ```	
 @Test 
-	public void testReverseInPlace() {
+public void testReverseInPlace() {
     int[] input2 = {1, 2, 3};
     ArrayExamples.reverseInPlace(input2);
     assertArrayEquals(new int[]{3, 2, 1}, input2);
-	} 
+} 
  ```
 
  Input that doesn't induce failure: 
  ```
- 	@Test 
-	public void testReverseInPlace() {
+@Test 
+public void testReverseInPlace() {
     int[] input1 = { 3 };
     ArrayExamples.reverseInPlace(input1);
     assertArrayEquals(new int[]{ 3 }, input1);
-	}
+}
  ```
 
 Symptoms:
