@@ -28,7 +28,7 @@ Symptoms:
 
 Bug:
 * Before:
-``
+```
 // Changes the input array to be in reversed order
   static void reverseInPlace(int[] arr) {
     for(int i = 0; i < arr.length; i += 1) {
@@ -37,7 +37,8 @@ Bug:
   }
   ``
 * After:
-``
+```
+```
 // Changes the input array to be in reversed order
   static void reverseInPlace(int[] arr) {
     int[] tempArr = new int[arr.length];
@@ -48,5 +49,5 @@ Bug:
       arr[i] = tempArr[i];
     }
   }
-  ``
+  ```
   The reason why there was a bug was that the array was overwriting its values at the same time it was reading through them. This logic flaw only reverses the first half of the array, leaving the second half as it already is (because the first half was switched to be the mirror of the original second half, so mirroring that again would just leave the original second half). The fix accounts for this by reading through the array values but storing them in a temporary array, so the danger of overriding values would not occur. Then, it copies over the reversed values from the temp array to the original array, correctly leaving a fully reversed array. 
