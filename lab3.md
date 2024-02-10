@@ -55,14 +55,37 @@ The reason why there was a bug was that the array was overwriting its values at 
 
 Command of choice - `find`
 
-Options and Examples: https://snapshooter.com/learn/linux/find#basic-syntax
+Options and Examples: 
 1. `-not`
-   * source used:
+First Example:
+```
+$ find ./technical -not -name "*.txt"
+./technical
+./technical/911report
+./technical/biomed
+./technical/government
+./technical/government/About_LSC
+./technical/government/Alcohol_Problems
+./technical/government/Env_Prot_Agen
+./technical/government/Gen_Account_Office
+./technical/government/Media
+./technical/government/Post_Rate_Comm
+./technical/plos
+```
+This command finds everything in the `technical` directory that is not a text file. This command could be useful to filter out certain file types, whether it's `.txt` or `.java` or anything.
+
+Second Example:
+```
+$ find ./technical -not -user leowe
+```
+This command finds everything in the `technical` directory that is not owned by user `leowe`, which is my system. It could be useful to look for any files that I don't own, which can help with file security.
+
+   * source used: https://snapshooter.com/learn/linux/find#basic-syntax
     
-2. `-iname`
+3. `-iname`
    * source used:
-3. `-size`
+4. `-size`
    * source used:
-4. `-exec`
+5. `-exec`
    * source used:
 https://linuxhandbook.com/find-exec-command/
