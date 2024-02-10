@@ -91,7 +91,7 @@ First Example:
 $ find ./technical -iname "cohenetal_comparison.txt"                                                                                                
 ./technical/government/Post_Rate_Comm/Cohenetal_comparison.txt
 ```
-This command finds the file named `Cohenetal_comparison.txt` even though the input is not capitalized correctly. This could be useful to look for specific file names if you aren't sure if it's capitalized or not because the `-iname` operator ignores case when looking for names.
+This command finds the file named `Cohenetal_comparison.txt` in the `technical` directory even though the input is not capitalized correctly. This could be useful to look for specific file names if you aren't sure if it's capitalized or not because the `-iname` operator ignores case when looking for names.
 
 Second Example:
 ```
@@ -103,7 +103,7 @@ $ find ./technical -iname "*cohenetal*"
 ./technical/government/Post_Rate_Comm/Cohenetal_RuralDelivery.txt
 ./technical/government/Post_Rate_Comm/Cohenetal_Scale.txt
 ```
-This command finds all files containing "cohenetal" in the file name regardless of capitalization. Similar to the first example, instead of specific file names, you can look for keywords in file names and ignore case, which is especially useful for large databases that may store files of varying capitalization. 
+This command finds all files in the `technical` directory containing "cohenetal" in the file name regardless of capitalization. Similar to the first example, instead of specific file names, you can look for keywords in file names and ignore case, which is especially useful for large databases that may store files of varying capitalization. 
    * source used: https://snapshooter.com/learn/linux/find#basic-syntax
 
 3. `-size`
@@ -129,7 +129,7 @@ $ find ./technical -size 14k
 ./technical/plos/pmed.0020039.txt
 ./technical/plos/pmed.0020067.txt
 ```
-This command finds all file sizes that are exactly 12kb in size. It could be useful if you wanted to find any file of a specific size.
+This command finds all files in `technical` directory with sizes that are exactly 12kb in size. It could be useful if you wanted to find any file of a specific size.
 
 Second Example:
 ```
@@ -144,9 +144,49 @@ $ find ./technical -size +200k
 ./technical/government/Gen_Account_Office/pe1019.txt
 ./technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt
 ```
-This command finds all file sizes that are greater than 200kb in size with the `+` addition in the operator. Unlike the first command, this can be useful to find files over a specific size instead of files at that specific size, which can be useful for storage or troubleshooting. You can also find files under a certain size with a `-` operator.
+This command finds all files in `technical` directory with sizes that are greater than 200kb in size with the `+` addition in the operator. Unlike the first command, this can be useful to find files over a specific size instead of files at that specific size, which can be useful for storage or troubleshooting. You can also find files under a certain size with a `-` operator.
    * source used: https://snapshooter.com/learn/linux/find#basic-syntax
 
-5. `-exec`
-   * source used:
-https://linuxhandbook.com/find-exec-command/
+4. `-exec`
+
+First Example:
+```
+leowe@DESKTOP-C6Q76OI MINGW64 ~/VisualCode/CSE15L/docsearch (main)
+$ find ./technical -size +300k
+./technical/government/Gen_Account_Office/d01591sp.txt
+./technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt
+
+leowe@DESKTOP-C6Q76OI MINGW64 ~/VisualCode/CSE15L/docsearch (main)
+$ find ./technical -size +300k -exec rm -f {} \;
+
+leowe@DESKTOP-C6Q76OI MINGW64 ~/VisualCode/CSE15L/docsearch (main)
+$ find ./technical -size +300k
+```
+Looking at the second command, we used `exec` to remove all files in the `technical` directory above the size of 300kb, which works as we can tell from the last command output. This could be useful if you wanted a program to clean disk space, which you could then use the `exec` and `rm` keywords to remove certain files, whether the criteria is file size or name or file type.
+
+Second Example:
+```
+leowe@DESKTOP-C6Q76OI MINGW64 ~/VisualCode/CSE15L/docsearch (main)
+$ find ./technical -name "*chapter*" -exec mv {} {}_renamed \;
+
+leowe@DESKTOP-C6Q76OI MINGW64 ~/VisualCode/CSE15L/docsearch (main)
+$ find ./technical -name "*chapter*"
+./technical/911report/chapter-1.txt_renamed
+./technical/911report/chapter-10.txt_renamed
+./technical/911report/chapter-11.txt_renamed
+./technical/911report/chapter-12.txt_renamed
+./technical/911report/chapter-13.1.txt_renamed
+./technical/911report/chapter-13.2.txt_renamed
+./technical/911report/chapter-13.3.txt_renamed
+./technical/911report/chapter-13.4.txt_renamed
+./technical/911report/chapter-13.5.txt_renamed
+./technical/911report/chapter-2.txt_renamed
+./technical/911report/chapter-3.txt_renamed
+./technical/911report/chapter-5.txt_renamed
+./technical/911report/chapter-6.txt_renamed
+./technical/911report/chapter-7.txt_renamed
+./technical/911report/chapter-8.txt_renamed
+./technical/911report/chapter-9.txt_renamed
+```
+In this command, I found all files in the `technical` directory and renamed every single one with `chapter` in it. This could help if you wanted to rename a mass amount of files. One specific case this could be useful is if you wanted to change a file extension, like changing all `.jpg` files to `.jpeg` files or vice versa. 
+   * source used: https://linuxhandbook.com/find-exec-command/ and https://snapshooter.com/learn/linux/find#basic-syntax
