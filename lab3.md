@@ -106,8 +106,47 @@ $ find ./technical -iname "*cohenetal*"
 This command finds all files containing "cohenetal" in the file name regardless of capitalization. Similar to the first example, instead of specific file names, you can look for keywords in file names and ignore case, which is especially useful for large databases that may store files of varying capitalization. 
    * source used: https://snapshooter.com/learn/linux/find#basic-syntax
 
-4. `-size`
-   * source used:
+3. `-size`
+
+First Example:
+```
+$ find ./technical -size 14k
+./technical/biomed/1471-213X-2-8.txt
+./technical/biomed/1471-2156-3-22.txt
+./technical/biomed/1471-2180-2-29.txt
+./technical/biomed/1471-230X-1-6.txt
+./technical/biomed/1471-2350-4-4.txt
+./technical/biomed/bcr635.txt
+./technical/government/About_LSC/conference_highlights.txt
+./technical/government/About_LSC/CONFIG_STANDARDS.txt
+./technical/government/About_LSC/Protocol_Regarding_Access.txt
+./technical/government/Env_Prot_Agen/tech_sectiong.txt
+./technical/plos/journal.pbio.0020183.txt
+./technical/plos/journal.pbio.0020311.txt
+./technical/plos/journal.pbio.0020401.txt
+./technical/plos/journal.pbio.0030024.txt
+./technical/plos/journal.pbio.0030094.txt
+./technical/plos/pmed.0020039.txt
+./technical/plos/pmed.0020067.txt
+```
+This command finds all file sizes that are exactly 12kb in size. It could be useful if you wanted to find any file of a specific size.
+
+Second Example:
+```
+$ find ./technical -size +200k
+./technical/911report/chapter-13.4.txt
+./technical/911report/chapter-13.5.txt
+./technical/911report/chapter-3.txt
+./technical/government/About_LSC/commission_report.txt
+./technical/government/Env_Prot_Agen/bill.txt
+./technical/government/Gen_Account_Office/d01591sp.txt
+./technical/government/Gen_Account_Office/GovernmentAuditingStandards_yb2002ed.txt
+./technical/government/Gen_Account_Office/pe1019.txt
+./technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt
+```
+This command finds all file sizes that are greater than 200kb in size with the `+` addition in the operator. Unlike the first command, this can be useful to find files over a specific size instead of files at that specific size, which can be useful for storage or troubleshooting. You can also find files under a certain size with a `-` operator.
+   * source used: https://snapshooter.com/learn/linux/find#basic-syntax
+
 5. `-exec`
    * source used:
 https://linuxhandbook.com/find-exec-command/
