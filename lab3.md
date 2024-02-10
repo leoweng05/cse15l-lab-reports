@@ -81,7 +81,7 @@ $ find ./technical -not -user leowe
 ```
 This command finds everything in the `technical` directory that is not owned by user `leowe`, which is my system. It could be useful to look for any files that I don't own, which can help with file security.
 
-   * source used: https://snapshooter.com/learn/linux/find#basic-syntax
+   * source used: [find](https://snapshooter.com/learn/linux/find#basic-syntax)
 
 
 2. `-iname`
@@ -104,7 +104,7 @@ $ find ./technical -iname "*cohenetal*"
 ./technical/government/Post_Rate_Comm/Cohenetal_Scale.txt
 ```
 This command finds all files in the `technical` directory containing "cohenetal" in the file name regardless of capitalization. Similar to the first example, instead of specific file names, you can look for keywords in file names and ignore case, which is especially useful for large databases that may store files of varying capitalization. 
-   * source used: https://snapshooter.com/learn/linux/find#basic-syntax
+   * source used: [find](https://snapshooter.com/learn/linux/find#basic-syntax)
 
 3. `-size`
 
@@ -145,7 +145,7 @@ $ find ./technical -size +200k
 ./technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt
 ```
 This command finds all files in `technical` directory with sizes that are greater than 200kb in size with the `+` addition in the operator. Unlike the first command, this can be useful to find files over a specific size instead of files at that specific size, which can be useful for storage or troubleshooting. You can also find files under a certain size with a `-` operator.
-   * source used: https://snapshooter.com/learn/linux/find#basic-syntax
+   * source used: [find](https://snapshooter.com/learn/linux/find#basic-syntax)
 
 4. `-exec`
 
@@ -189,4 +189,4 @@ $ find ./technical -name "*chapter*"
 ./technical/911report/chapter-9.txt_renamed
 ```
 In this command, I found all files in the `technical` directory and renamed every single one with `chapter` in it. This could help if you wanted to rename a mass amount of files. One specific case this could be useful is if you wanted to change a file extension, like changing all `.jpg` files to `.jpeg` files or vice versa. 
-   * source used: https://linuxhandbook.com/find-exec-command/ and https://snapshooter.com/learn/linux/find#basic-syntax
+   * source used: [exec](https://linuxhandbook.com/find-exec-command/) and [find](https://snapshooter.com/learn/linux/find#basic-syntax)
