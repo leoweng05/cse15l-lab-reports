@@ -82,7 +82,8 @@ $ find ./technical -not -user leowe
 This command finds everything in the `technical` directory that is not owned by user `leowe`, which is my system. It could be useful to look for any files that I don't own, which can help with file security.
 
    * source used: https://snapshooter.com/learn/linux/find#basic-syntax
-    
+
+
 2. `-iname`
 
 First Example:
