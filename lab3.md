@@ -57,6 +57,7 @@ Command of choice - `find`
 
 Options and Examples: 
 1. `-not`
+
 First Example:
 ```
 $ find ./technical -not -name "*.txt"
@@ -82,8 +83,28 @@ This command finds everything in the `technical` directory that is not owned by 
 
    * source used: https://snapshooter.com/learn/linux/find#basic-syntax
     
-3. `-iname`
-   * source used:
+2. `-iname`
+
+First Example:
+```
+$ find ./technical -iname "cohenetal_comparison.txt"                                                                                                
+./technical/government/Post_Rate_Comm/Cohenetal_comparison.txt
+```
+This command finds the file named `Cohenetal_comparison.txt` even though the input is not capitalized correctly. This could be useful to look for specific file names if you aren't sure if it's capitalized or not because the `-iname` operator ignores case when looking for names.
+
+Second Example:
+```
+$ find ./technical -iname "*cohenetal*"
+./technical/government/Post_Rate_Comm/Cohenetal_comparison.txt
+./technical/government/Post_Rate_Comm/Cohenetal_Cost_Function.txt
+./technical/government/Post_Rate_Comm/Cohenetal_CreamSkimming.txt
+./technical/government/Post_Rate_Comm/Cohenetal_DeliveryCost.txt 
+./technical/government/Post_Rate_Comm/Cohenetal_RuralDelivery.txt
+./technical/government/Post_Rate_Comm/Cohenetal_Scale.txt
+```
+This command finds all files containing "cohenetal" in the file name regardless of capitalization. Similar to the first example, instead of specific file names, you can look for keywords in file names and ignore case, which is especially useful for large databases that may store files of varying capitalization. 
+   * source used: https://snapshooter.com/learn/linux/find#basic-syntax
+
 4. `-size`
    * source used:
 5. `-exec`
