@@ -26,7 +26,7 @@ Keys pressed: `cd<Space>lab7` `<enter>` `bash<Space>test.sh` `<enter>`
 ![image](https://github.com/leoweng05/cse15l-lab-reports/assets/62259208/89ee859d-495a-4a97-822f-b539d4b11eb0)
 ![image](https://github.com/leoweng05/cse15l-lab-reports/assets/62259208/742b9b1f-e883-4464-b5e9-f439f03242cd)
 
-Keys pressed: `vim<Space>L` `<Tab>` `.java` `<enter>` 
+Keys pressed: `vim<Space><Shift + L>` `<Tab>` `.java` `<enter>` 
 * This part of the step put me into the Vim text editor of the file that I had to fix. The `<Tab>` filled out the rest of the file name after typing `L`, which was `ListExamples.java`, and I manually typed the rest of the file name. 
 
 Keys pressed: `/index1` `<enter>` `nnnnnnnnner2` `<Esc>` `:wq` `<enter>` 
@@ -43,7 +43,7 @@ Keys pressed:  `bash<Space>test.sh` `<enter>`
 
 ![image](https://github.com/leoweng05/cse15l-lab-reports/assets/62259208/409749c3-81f0-46ab-b4d2-1fda8413d696)
 
-Keys pressed: `git<Space>add<Space>L` `<Tab>` `.java` `<enter>`
+Keys pressed: `git<Space>add<Space><Shift + L>` `<Tab>` `.java` `<enter>`
 * This command types `git add` and autocompletes the fill to be prepped to be committed, which is `ListExamples.java`, similar to how the file was autocompleted in the command line for Step 7. After adding the file that was changed, the file is now ready to be committed.
 
 Keys pressed: `git<Space>commit<Space>-m<Space>` `<Shift + '>` `Fixed<Space>tests` `<Shift + '>` `<enter>`
