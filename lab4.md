@@ -29,7 +29,7 @@ Keys pressed: `cd<Space>lab7` `<enter>` `bash<Space>test.sh` `<enter>`
 Keys pressed: `vim<Space><Shift + L>` `<Tab>` `.java` `<enter>` 
 * This part of the step put me into the Vim text editor of the file that I had to fix. The `<Tab>` filled out the rest of the file name after typing `L`, which was `ListExamples.java`, and I manually typed the rest of the file name. 
 
-Keys pressed: `/index1` `<enter>` `nnnnnnnnner2` `<Esc>` `:wq` `<enter>` 
+Keys pressed: `/index1` `<enter>` `nnnnnnnnner2` `<Esc>` `<Shift + ;>wq` `<enter>` 
 * The first command searched the file for all occurences of `index1` which was the string to be fixed in the test file. Running and pressing `<enter>` let me search through it, and pressing `n` nine times navigated me to the occurence of `index1` for me to fix. Pressing `e` took me to the last character of the word, and typing `r` and then `2` replaced the last character with `2`, effectively turning the `index1` occurence into `index2`. At this point, I was still in insert mode, so pressing `<Esc>` took me into normal mode, where I saved and quitted the file through the colon command `:wq` and ran it with `<enter>`.
 
 ## Step 8
@@ -46,7 +46,7 @@ Keys pressed:  `bash<Space>test.sh` `<enter>`
 Keys pressed: `git<Space>add<Space><Shift + L>` `<Tab>` `.java` `<enter>`
 * This command types `git add` and autocompletes the fill to be prepped to be committed, which is `ListExamples.java`, similar to how the file was autocompleted in the command line for Step 7. After adding the file that was changed, the file is now ready to be committed.
 
-Keys pressed: `git<Space>commit<Space>-m<Space>` `<Shift + '>` `Fixed<Space>tests` `<Shift + '>` `<enter>`
+Keys pressed: `git<Space>commit<Space>-m<Space>` `<Shift + '>` `<Shift + F>ixed<Space>tests` `<Shift + '>` `<enter>`
 * This command types `git commit` and with the `-m` tag, I filled out my own commit message using quotation marks for the syntax, `Fixed tests`. This commits(saves) my change to the local repository on the ieng6 machine.
 
 Keys pressed: `git<Space>push<Space>origin<Space>main` `<enter>` 
